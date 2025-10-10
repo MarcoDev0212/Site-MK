@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js"></script>
-    
+   
     <style>
         /* Variáveis e Reset CSS */
         :root {
@@ -34,8 +34,8 @@
             --font-primary: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
             --font-display: 'Playfair Display', Georgia, serif;
             --container-max: 1400px;
-            --section-padding: 4rem 0; /* Reduzido para mobile */
-            --element-gap: 1.5rem; /* Reduzido para mobile */
+            --section-padding: 4rem 0;
+            --element-gap: 1.5rem;
             --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
             --transition-slow: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
             --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
@@ -44,7 +44,6 @@
             --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
             --shadow-2xl: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
         }
-
         * { margin: 0; padding: 0; box-sizing: border-box; }
         html { scroll-behavior: smooth; }
         body {
@@ -56,7 +55,6 @@
             overflow-x: hidden;
             position: relative;
         }
-
         /* Animações */
         @keyframes fadeIn { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
         @keyframes fadeInUp { from { opacity: 0; transform: translateY(50px); } to { opacity: 1; transform: translateY(0); } }
@@ -75,17 +73,16 @@
         .animate-scaleIn { animation: scaleIn 0.6s ease-out forwards; }
         .animate-pulse { animation: pulse 2s infinite; }
         .animate-float { animation: float 3s ease-in-out infinite; }
-
         /* Utilitários */
-        .container { max-width: var(--container-max); margin: 0 auto; padding: 0 1rem; /* Reduzido para mobile */ }
+        .container { max-width: var(--container-max); margin: 0 auto; padding: 0 1rem; }
         .section {
             position: relative;
             padding: var(--section-padding);
             opacity: 0;
             transform: translateY(30px);
             transition: var(--transition-slow);
-            border-radius: 0.5rem; /* Reduzido para mobile */
-            margin: 0.5rem 0; /* Reduzido para mobile */
+            border-radius: 0.5rem;
+            margin: 0.5rem 0;
             overflow: hidden;
         }
         .section.active { opacity: 1; transform: translateY(0); }
@@ -104,19 +101,19 @@
         }
         .section-title {
             font-family: var(--font-display);
-            font-size: clamp(2rem, 4vw, 2.5rem); /* Reduzido para mobile */
+            font-size: clamp(2rem, 4vw, 2.5rem);
             font-weight: 800;
             text-align: center;
-            margin-bottom: 0.75rem; /* Reduzido para mobile */
+            margin-bottom: 0.75rem;
             color: var(--white);
-            line-height: 1.2; /* Ajustado para melhor leitura */
+            line-height: 1.2;
         }
         .section-subtitle {
-            font-size: 1rem; /* Reduzido para mobile */
+            font-size: 1rem;
             text-align: center;
             color: var(--white);
-            margin-bottom: 2rem; /* Reduzido para mobile */
-            max-width: 90%; /* Ajustado para mobile */
+            margin-bottom: 2rem;
+            max-width: 90%;
             margin-left: auto;
             margin-right: auto;
         }
@@ -124,14 +121,14 @@
             display: inline-flex;
             align-items: center;
             gap: 0.5rem;
-            padding: 0.75rem 1.5rem; /* Reduzido para mobile */
+            padding: 0.75rem 1.5rem;
             border: none;
-            border-radius: 0.5rem; /* Reduzido para mobile */
+            border-radius: 0.5rem;
             font-weight: 600;
             text-decoration: none;
             cursor: pointer;
             transition: var(--transition);
-            font-size: 0.9rem; /* Reduzido para mobile */
+            font-size: 0.9rem;
             line-height: 1;
             position: relative;
             overflow: hidden;
@@ -176,7 +173,6 @@
             color: var(--white);
             border-color: var(--neutral-900);
         }
-
         /* Header e Navegação */
         .header {
             position: fixed;
@@ -197,16 +193,16 @@
             display: flex;
             align-items: center;
             justify-content: space-between;
-            padding: 0.75rem 1rem; /* Reduzido para mobile */
+            padding: 0.75rem 1rem;
             max-width: var(--container-max);
             margin: 0 auto;
         }
         .logo {
             display: flex;
             align-items: center;
-            gap: 0.5rem; /* Reduzido para mobile */
+            gap: 0.5rem;
             font-family: var(--font-display);
-            font-size: 1.25rem; /* Reduzido para mobile */
+            font-size: 1.25rem;
             font-weight: 800;
             color: var(--neutral-100);
             text-decoration: none;
@@ -215,13 +211,13 @@
         .logo:hover { transform: scale(1.05); }
         .logo-icon {
             color: var(--secondary);
-            font-size: 1.5rem; /* Reduzido para mobile */
+            font-size: 1.5rem;
             animation: pulse 2s infinite;
         }
         .nav-menu {
             display: flex;
             align-items: center;
-            gap: 1rem; /* Reduzido para mobile */
+            gap: 1rem;
             list-style: none;
         }
         .nav-link {
@@ -229,13 +225,13 @@
             color: var(--neutral-400);
             text-decoration: none;
             font-weight: 500;
-            padding: 0.25rem 0.5rem; /* Reduzido para mobile */
-            border-radius: 0.25rem; /* Reduzido para mobile */
+            padding: 0.25rem 0.5rem;
+            border-radius: 0.25rem;
             transition: var(--transition);
             display: flex;
             align-items: center;
             gap: 0.25rem;
-            font-size: 0.9rem; /* Reduzido para mobile */
+            font-size: 0.9rem;
         }
         .nav-link:hover {
             color: var(--neutral-100);
@@ -248,7 +244,7 @@
         .nav-link.active::after {
             content: '';
             position: absolute;
-            bottom: -0.5rem; /* Ajustado para mobile */
+            bottom: -0.5rem;
             left: 50%;
             transform: translateX(-50%);
             width: 4px;
@@ -260,17 +256,16 @@
             display: none;
             background: none;
             border: none;
-            font-size: 1.25rem; /* Reduzido para mobile */
+            font-size: 1.25rem;
             color: var(--neutral-400);
             cursor: pointer;
             transition: var(--transition);
         }
         .mobile-menu-btn:hover { color: var(--neutral-100); }
-
         /* Hero Section */
         .hero {
             position: relative;
-            min-height: 80vh; /* Reduzido para mobile */
+            min-height: 80vh;
             display: flex;
             align-items: center;
             overflow: hidden;
@@ -280,53 +275,53 @@
             z-index: 2;
             max-width: var(--container-max);
             margin: 0 auto;
-            padding: 0 1rem; /* Reduzido para mobile */
+            padding: 0 1rem;
             text-align: center;
             color: var(--white);
         }
         .hero-title {
             font-family: var(--font-display);
-            font-size: clamp(2rem, 6vw, 3rem); /* Reduzido para mobile */
+            font-size: clamp(2rem, 6vw, 3rem);
             font-weight: 900;
-            margin-bottom: 1rem; /* Reduzido para mobile */
+            margin-bottom: 1rem;
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
             animation: fadeInUp 1s ease-out;
-            border-right: 2px solid var(--accent); /* Reduzido para mobile */
+            border-right: 2px solid var(--accent);
             white-space: nowrap;
             overflow: hidden;
         }
         .hero-subtitle {
-            font-size: clamp(1rem, 2.5vw, 1.25rem); /* Reduzido para mobile */
-            margin-bottom: 1.5rem; /* Reduzido para mobile */
+            font-size: clamp(1rem, 2.5vw, 1.25rem);
+            margin-bottom: 1.5rem;
             opacity: 0.9;
             animation: fadeInUp 1s ease-out 0.2s both;
         }
         .hero-description {
-            font-size: 0.9rem; /* Reduzido para mobile */
-            max-width: 90%; /* Ajustado para mobile */
-            margin: 0 auto 2rem; /* Reduzido para mobile */
+            font-size: 0.9rem;
+            max-width: 90%;
+            margin: 0 auto 2rem;
             opacity: 0.8;
             animation: fadeInUp 1s ease-out 0.4s both;
         }
         .hero-buttons {
             display: flex;
-            gap: 0.75rem; /* Reduzido para mobile */
+            gap: 0.75rem;
             justify-content: center;
             flex-wrap: wrap;
             animation: fadeInUp 1s ease-out 0.6s both;
         }
         .hero-stats {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Ajustado para mobile */
-            gap: 1rem; /* Reduzido para mobile */
-            margin-top: 2rem; /* Reduzido para mobile */
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 1rem;
+            margin-top: 2rem;
             animation: fadeInUp 1s ease-out 0.8s both;
         }
         .hero-stat {
             text-align: center;
-            padding: 1.5rem; /* Reduzido para mobile */
+            padding: 1.5rem;
             background: rgba(255, 255, 255, 0.1);
-            border-radius: 0.5rem; /* Reduzido para mobile */
+            border-radius: 0.5rem;
             backdrop-filter: blur(10px);
             border: 1px solid rgba(255, 255, 255, 0.2);
             transition: var(--transition);
@@ -350,64 +345,63 @@
         }
         .hero-stat-number {
             font-family: var(--font-display);
-            font-size: 2rem; /* Reduzido para mobile */
+            font-size: 2rem;
             font-weight: 900;
             color: var(--accent);
-            margin-bottom: 0.25rem; /* Reduzido para mobile */
+            margin-bottom: 0.25rem;
             position: relative;
             z-index: 2;
         }
         .hero-stat-label {
-            font-size: 0.9rem; /* Reduzido para mobile */
+            font-size: 0.9rem;
             opacity: 0.9;
             position: relative;
             z-index: 2;
         }
-
         /* Clube Section */
         .clube-section 
         .about-grid {
             display: grid;
-            grid-template-columns: 1fr; /* Empilhado para mobile */
-            gap: 2rem; /* Reduzido para mobile */
+            grid-template-columns: 1fr;
+            gap: 2rem;
             align-items: center;
-            margin-bottom: 3rem; /* Reduzido para mobile */
+            margin-bottom: 3rem;
         }
         .about-content h3 {
             font-family: var(--font-display);
-            font-size: 1.75rem; /* Reduzido para mobile */
+            font-size: 1.75rem;
             font-weight: 700;
-            margin-bottom: 1rem; /* Reduzido para mobile */
+            margin-bottom: 1rem;
             color: var(--white);
         }
         .about-content p {
-            font-size: 0.9rem; /* Reduzido para mobile */
+            font-size: 0.9rem;
             color: var(--white);
-            margin-bottom: 1rem; /* Reduzido para mobile */
-            line-height: 1.6; /* Ajustado para mobile */
+            margin-bottom: 1rem;
+            line-height: 1.6;
         }
         .about-image {
             position: relative;
-            border-radius: 0.5rem; /* Reduzido para mobile */
+            border-radius: 0.5rem;
             overflow: hidden;
             box-shadow: var(--shadow-2xl);
         }
         .about-image img {
             width: 100%;
-            height: 250px; /* Reduzido para mobile */
+            height: 250px;
             object-fit: cover;
             transition: var(--transition);
         }
         .about-image:hover img { transform: scale(1.05); }
         .stats-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Ajustado para mobile */
-            gap: 1rem; /* Reduzido para mobile */
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 1rem;
         }
         .stat-card {
             background: rgba(255, 255, 255, 0.1);
-            padding: 1.5rem 1rem; /* Reduzido para mobile */
-            border-radius: 0.5rem; /* Reduzido para mobile */
+            padding: 1.5rem 1rem;
+            border-radius: 0.5rem;
             text-align: center;
             box-shadow: var(--shadow-lg);
             transition: var(--transition);
@@ -433,31 +427,135 @@
         }
         .stat-number {
             font-family: var(--font-display);
-            font-size: 2rem; /* Reduzido para mobile */
+            font-size: 2rem;
             font-weight: 900;
             color: var(--accent);
-            margin-bottom: 0.25rem; /* Reduzido para mobile */
+            margin-bottom: 0.25rem;
             position: relative;
             z-index: 2;
         }
         .stat-label {
-            font-size: 0.9rem; /* Reduzido para mobile */
+            font-size: 0.9rem;
             color: var(--white);
             font-weight: 500;
             position: relative;
             z-index: 2;
         }
-
+        /* Títulos Section */
+        .titulos-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1rem;
+        }
+        .titulo-card {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 0.5rem;
+            overflow: hidden;
+            box-shadow: var(--shadow-lg);
+            transition: var(--transition);
+            border: 1px solid var(--neutral-200);
+            position: relative;
+        }
+        .titulo-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: var(--gradient-secondary);
+            transform: scaleX(0);
+            transition: transform 0.3s ease;
+        }
+        .titulo-card:hover::before { transform: scaleX(1); }
+        .titulo-card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-2xl);
+        }
+        .titulo-header {
+            position: relative;
+            height: 150px;
+            background: var(--gradient-primary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+        .titulo-header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('https://images.unsplash.com/photo-1543339308-43e59d6b73a6?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80') center/cover;
+            opacity: 0.2;
+        }
+        .titulo-trophy {
+            position: relative;
+            z-index: 2;
+            font-size: 3rem;
+            color: var(--accent);
+        }
+        .titulo-info {
+            padding: 1.5rem;
+            text-align: center;
+        }
+        .titulo-name {
+            font-family: var(--font-display);
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--neutral-900);
+            margin-bottom: 0.25rem;
+        }
+        .titulo-year {
+            color: var(--secondary);
+            font-weight: 600;
+            margin-bottom: 0.75rem;
+            font-size: 0.9rem;
+        }
+        .titulo-description {
+            color: var(--neutral-600);
+            font-size: 0.8rem;
+            margin-bottom: 1rem;
+            line-height: 1.4;
+        }
+        /* Banner Section */
+        .banner-content {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        .banner-image {
+            position: relative;
+            border-radius: 0.5rem;
+            overflow: hidden;
+            box-shadow: var(--shadow-2xl);
+            margin-bottom: 1.5rem;
+        }
+        .banner-image img {
+            width: 100%;
+            height: auto;
+            max-height: 400px;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+        .banner-image:hover img { transform: scale(1.05); }
+        .banner-description {
+            font-size: 0.9rem;
+            color: var(--white);
+            line-height: 1.6;
+        }
         /* Elenco Section */
         .elenco-section 
         .players-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Ajustado para mobile */
-            gap: 1rem; /* Reduzido para mobile */
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1rem;
         }
         .player-card {
             background: rgba(255, 255, 255, 0.95);
-            border-radius: 0.5rem; /* Reduzido para mobile */
+            border-radius: 0.5rem;
             overflow: hidden;
             box-shadow: var(--shadow-lg);
             transition: var(--transition);
@@ -470,7 +568,7 @@
             top: 0;
             left: 0;
             right: 0;
-            height: 3px; /* Reduzido para mobile */
+            height: 3px;
             background: var(--gradient-secondary);
             transform: scaleX(0);
             transition: transform 0.3s ease;
@@ -482,7 +580,7 @@
         }
         .player-header {
             position: relative;
-            height: 150px; /* Reduzido para mobile */
+            height: 150px;
             background: var(--gradient-primary);
             display: flex;
             align-items: center;
@@ -502,14 +600,14 @@
         .player-avatar {
             position: relative;
             z-index: 2;
-            width: 100px; /* Reduzido para mobile */
-            height: 100px; /* Reduzido para mobile */
+            width: 100px;
+            height: 100px;
             background: var(--neutral-100);
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 2rem; /* Reduzido para mobile */
+            font-size: 2rem;
             color: var(--secondary);
             box-shadow: var(--shadow-xl);
             transition: var(--transition);
@@ -522,73 +620,73 @@
             transition: transform 0.3s;
         }
         .player-card:hover .player-avatar img { transform: scale(1.1); }
-        .player-info { padding: 1.5rem; /* Reduzido para mobile */ text-align: center; }
+        .player-info { padding: 1.5rem; text-align: center; }
         .player-name {
             font-family: var(--font-display);
-            font-size: 1.25rem; /* Reduzido para mobile */
+            font-size: 1.25rem;
             font-weight: 700;
             color: var(--neutral-900);
-            margin-bottom: 0.25rem; /* Reduzido para mobile */
+            margin-bottom: 0.25rem;
         }
         .player-position {
             color: var(--secondary);
             font-weight: 600;
-            margin-bottom: 0.75rem; /* Reduzido para mobile */
-            font-size: 0.9rem; /* Reduzido para mobile */
+            margin-bottom: 0.75rem;
+            font-size: 0.9rem;
         }
         .player-description {
             color: var(--neutral-600);
-            font-size: 0.8rem; /* Reduzido para mobile */
-            margin-bottom: 1rem; /* Reduzido para mobile */
-            line-height: 1.4; /* Ajustado para mobile */
+            font-size: 0.8rem;
+            margin-bottom: 1rem;
+            line-height: 1.4;
         }
         .player-stats {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
-            gap: 0.5rem; /* Reduzido para mobile */
-            margin-top: 1rem; /* Reduzido para mobile */
-            padding-top: 1rem; /* Reduzido para mobile */
+            gap: 0.5rem;
+            margin-top: 1rem;
+            padding-top: 1rem;
             border-top: 1px solid var(--neutral-200);
         }
         .player-stat { text-align: center; }
         .player-stat-value {
-            font-size: 1.25rem; /* Reduzido para mobile */
+            font-size: 1.25rem;
             font-weight: 700;
             color: var(--accent);
             margin-bottom: 0.25rem;
         }
         .player-stat-label {
-            font-size: 0.75rem; /* Reduzido para mobile */
+            font-size: 0.75rem;
             color: var(--neutral-600);
         }
         /* Estilo para grupos de posições */
-        .position-group { margin-bottom: 2rem; /* Reduzido para mobile */ }
+        .position-group { margin-bottom: 2rem; }
         .position-title {
             font-family: var(--font-display);
-            font-size: 1.5rem; /* Reduzido para mobile */
+            font-size: 1.5rem;
             font-weight: 700;
             color: var(--white);
-            margin-bottom: 1rem; /* Reduzido para mobile */
+            margin-bottom: 1rem;
             text-align: center;
             position: relative;
         }
         .position-title::after {
             content: '';
             display: block;
-            width: 80px; /* Reduzido para mobile */
-            height: 2px; /* Reduzido para mobile */
+            width: 80px;
+            height: 2px;
             background: var(--gradient-secondary);
-            margin: 0.25rem auto 0; /* Reduzido para mobile */
+            margin: 0.25rem auto 0;
             border-radius: 2px;
         }
         /* Links Sociais dos Jogadores */
         .social-link {
             position: absolute;
-            top: 10px; /* Reduzido para mobile */
-            right: 10px; /* Reduzido para mobile */
-            font-size: 1.25rem; /* Reduzido para mobile */
-            width: 30px; /* Reduzido para mobile */
-            height: 30px; /* Reduzido para mobile */
+            top: 10px;
+            right: 10px;
+            font-size: 1.25rem;
+            width: 30px;
+            height: 30px;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -608,18 +706,17 @@
             transform: scale(1.1) rotate(5deg);
             box-shadow: var(--shadow-md);
         }
-
         /* Redes Section */
         .redes-section 
         .social-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Ajustado para mobile */
-            gap: 1rem; /* Reduzido para mobile */
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1rem;
         }
         .social-card {
             background: var(--white);
-            padding: 2rem 1rem; /* Reduzido para mobile */
-            border-radius: 0.5rem; /* Reduzido para mobile */
+            padding: 2rem 1rem;
+            border-radius: 0.5rem;
             text-align: center;
             box-shadow: var(--shadow-lg);
             border: 1px solid var(--neutral-200);
@@ -633,7 +730,7 @@
             top: 0;
             left: 0;
             right: 0;
-            height: 3px; /* Reduzido para mobile */
+            height: 3px;
             background: var(--gradient-secondary);
             transform: scaleX(0);
             transition: transform 0.3s ease;
@@ -647,36 +744,34 @@
         .social-card.twitch::before { background: linear-gradient(90deg, #9146ff, #6441a5); }
         .social-card.instagram::before { background: linear-gradient(90deg, #e4405f, #c13584, #833ab4); }
         .social-icon {
-            font-size: 3rem; /* Reduzido para mobile */
-            margin-bottom: 1rem; /* Reduzido para mobile */
+            font-size: 3rem;
+            margin-bottom: 1rem;
             transition: var(--transition);
         }
         .social-card:hover .social-icon { transform: scale(1.2) rotate(5deg); }
         .social-title {
             font-family: var(--font-display);
-            font-size: 1.25rem; /* Reduzido para mobile */
+            font-size: 1.25rem;
             font-weight: 700;
             color: var(--neutral-900);
-            margin-bottom: 0.75rem; /* Reduzido para mobile */
+            margin-bottom: 0.75rem;
         }
         .social-description {
             color: var(--neutral-600);
-            margin-bottom: 1.5rem; /* Reduzido para mobile */
-            line-height: 1.4; /* Ajustado para mobile */
-            font-size: 0.9rem; /* Reduzido para mobile */
+            margin-bottom: 1.5rem;
+            line-height: 1.4;
+            font-size: 0.9rem;
         }
-
         /* Footer */
         .footer {
             background: rgba(15, 23, 42, 0.9);
             color: var(--neutral-300);
-            padding: 2rem 0 1rem; /* Reduzido para mobile */
+            padding: 2rem 0 1rem;
             text-align: center;
         }
         .footer-content { max-width: var(--container-max); margin: 0 auto; padding: 0 1rem; }
-        .footer p { margin-bottom: 0.25rem; font-size: 0.9rem; /* Reduzido para mobile */ }
+        .footer p { margin-bottom: 0.25rem; font-size: 0.9rem; }
         .footer-heart { color: var(--secondary); animation: pulse 2s infinite; }
-
         /* Modal e Formulário */
         .modal {
             display: none;
@@ -689,21 +784,21 @@
             overflow: auto;
             background-color: rgba(0,0,0,0.8);
             backdrop-filter: blur(5px);
-            padding-top: 40px; /* Reduzido para mobile */
+            padding-top: 40px;
         }
         .modal-content {
             background-color: var(--white);
-            margin: 5% 0.5rem; /* Ajustado para mobile */
-            padding: 20px; /* Reduzido para mobile */
-            border-radius: 0.5rem; /* Reduzido para mobile */
+            margin: 5% 0.5rem;
+            padding: 20px;
+            border-radius: 0.5rem;
             box-shadow: var(--shadow-2xl);
-            max-width: 90%; /* Ajustado para mobile */
+            max-width: 90%;
             position: relative;
             animation: scaleIn 0.3s ease-out;
         }
         .modal-title {
             font-family: var(--font-display);
-            font-size: 1.5rem; /* Reduzido para mobile */
+            font-size: 1.5rem;
             font-weight: 700;
             margin-bottom: 0.25rem;
             color: var(--secondary);
@@ -712,18 +807,18 @@
         .modal-subtitle {
             text-align: center;
             color: var(--neutral-600);
-            margin-bottom: 1rem; /* Reduzido para mobile */
-            font-size: 0.9rem; /* Reduzido para mobile */
+            margin-bottom: 1rem;
+            font-size: 0.9rem;
         }
         .close-btn {
             color: var(--neutral-500);
             float: right;
-            font-size: 24px; /* Reduzido para mobile */
+            font-size: 24px;
             font-weight: bold;
             transition: var(--transition);
             position: absolute;
-            top: 8px; /* Reduzido para mobile */
-            right: 15px; /* Reduzido para mobile */
+            top: 8px;
+            right: 15px;
             cursor: pointer;
         }
         .close-btn:hover, .close-btn:focus {
@@ -731,20 +826,20 @@
             text-decoration: none;
             transform: scale(1.1);
         }
-        .form-group { margin-bottom: 1rem; /* Reduzido para mobile */ }
+        .form-group { margin-bottom: 1rem; }
         .form-group label {
             display: block;
             font-weight: 600;
-            margin-bottom: 0.25rem; /* Reduzido para mobile */
+            margin-bottom: 0.25rem;
             color: var(--neutral-800);
-            font-size: 0.9rem; /* Reduzido para mobile */
+            font-size: 0.9rem;
         }
         .form-group input[type="text"], .form-group select {
             width: 100%;
-            padding: 0.5rem; /* Reduzido para mobile */
+            padding: 0.5rem;
             border: 1px solid var(--neutral-300);
-            border-radius: 0.25rem; /* Reduzido para mobile */
-            font-size: 0.9rem; /* Reduzido para mobile */
+            border-radius: 0.25rem;
+            font-size: 0.9rem;
             background: var(--neutral-50);
             transition: var(--transition);
         }
@@ -756,13 +851,13 @@
         }
         .btn-submit {
             width: 100%;
-            margin-top: 1rem; /* Reduzido para mobile */
-            padding: 0.75rem; /* Reduzido para mobile */
-            font-size: 1rem; /* Reduzido para mobile */
+            margin-top: 1rem;
+            padding: 0.75rem;
+            font-size: 1rem;
         }
         .whatsapp-disclaimer {
-            margin-top: 0.75rem; /* Reduzido para mobile */
-            font-size: 0.75rem; /* Reduzido para mobile */
+            margin-top: 0.75rem;
+            font-size: 0.75rem;
             color: var(--neutral-500);
             text-align: center;
         }
@@ -770,7 +865,6 @@
             border-color: #dc2626 !important;
             box-shadow: 0 0 0 3px rgba(220, 38, 38, 0.1) !important;
         }
-
         /* Responsividade */
         @media (max-width: 768px) {
             .nav-menu {
@@ -781,28 +875,29 @@
                 right: 0;
                 background: var(--neutral-900);
                 flex-direction: column;
-                padding: 1rem; /* Reduzido para mobile */
+                padding: 1rem;
                 box-shadow: var(--shadow-lg);
                 border-top: 1px solid var(--neutral-200);
             }
             .nav-menu.active { display: flex; }
             .mobile-menu-btn { display: block; }
-            .hero { min-height: 60vh; } /* Reduzido para mobile */
+            .hero { min-height: 60vh; }
             .hero-buttons { flex-direction: column; align-items: center; }
             .hero-title { white-space: normal; border-right: none; }
             .about-grid { grid-template-columns: 1fr; }
-            .about-image img { height: 200px; } /* Reduzido para mobile */
-            .hero-stats, .stats-grid, .players-grid, .social-grid { grid-template-columns: 1fr; }
+            .about-image img { height: 200px; }
+            .hero-stats, .stats-grid, .players-grid, .social-grid, .titulos-grid { grid-template-columns: 1fr; }
+            .banner-image img { max-height: 300px; }
         }
         @media (max-width: 480px) {
-            .container { padding: 0 0.5rem; } /* Reduzido para mobile */
-            .section { padding: 2rem 0; } /* Reduzido para mobile */
+            .container { padding: 0 0.5rem; }
+            .section { padding: 2rem 0; }
             .section-title { font-size: clamp(1.5rem, 3vw, 2rem); }
             .section-subtitle { font-size: 0.9rem; }
             .hero-title { font-size: clamp(1.5rem, 5vw, 2rem); }
             .hero-subtitle { font-size: 0.9rem; }
             .hero-description { font-size: 0.8rem; }
-            .hero-stat-number, .stat-number { font-size: 1.5rem; } /* Reduzido para mobile */
+            .hero-stat-number, .stat-number { font-size: 1.5rem; }
             .hero-stat-label, .stat-label { font-size: 0.8rem; }
             .player-name { font-size: 1.1rem; }
             .player-position { font-size: 0.8rem; }
@@ -819,8 +914,12 @@
             .form-group label { font-size: 0.8rem; }
             .form-group input[type="text"], .form-group select { font-size: 0.8rem; }
             .btn { font-size: 0.8rem; padding: 0.5rem 1rem; }
+            .titulo-name { font-size: 1.1rem; }
+            .titulo-year { font-size: 0.8rem; }
+            .titulo-description { font-size: 0.75rem; }
+            .banner-image img { max-height: 250px; }
+            .banner-description { font-size: 0.8rem; }
         }
-
         /* Efeitos Adicionais */
         .shimmer {
             background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
@@ -852,6 +951,8 @@
                     <li><a href="#hero" class="nav-link active"><i class="fas fa-home" aria-hidden="true"></i> Início</a></li>
                     <li><a href="#clube" class="nav-link"><i class="fas fa-users" aria-hidden="true"></i> Clube</a></li>
                     <li><a href="#elenco" class="nav-link"><i class="fas fa-shirt" aria-hidden="true"></i> Elenco</a></li>
+                    <li><a href="#titulos" class="nav-link"><i class="fas fa-trophy" aria-hidden="true"></i> Títulos</a></li>
+                    <li><a href="#banner" class="nav-link"><i class="fas fa-image" aria-hidden="true"></i> Banner</a></li>
                     <li><a href="#redes" class="nav-link"><i class="fas fa-share-alt" aria-hidden="true"></i> Redes</a></li>
                     <li><a href="#recrutar-modal" id="open-recrutar-modal" class="btn btn-primary" onclick="openModal('recrutar-modal')" aria-label="Abrir formulário de recrutamento"><i class="fas fa-user-plus" aria-hidden="true"></i> Recrutar</a></li>
                 </ul>
@@ -861,7 +962,6 @@
             </button>
         </div>
     </header>
-
     <main id="main-content">
         <section id="hero" class="hero section active" tabindex="-1">
             <video class="section-video" autoplay loop muted playsinline>
@@ -896,7 +996,6 @@
                 </div>
             </div>
         </section>
-
         <section id="clube" class="clube-section section" tabindex="-1">
             <video class="section-video" autoplay loop muted playsinline>
                 <source src="3722209-hd_1920_1080_25fps.mp4" type="video/mp4">
@@ -934,7 +1033,70 @@
                 </div>
             </div>
         </section>
-
+        <section id="titulos" class="titulos-section section" tabindex="-1">
+            <video class="section-video" autoplay loop muted playsinline>
+                <source src="3722209-hd_1920_1080_25fps.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <div class="container section-content">
+                <h2 class="section-title animate-fadeIn">Nossos Títulos</h2>
+                <p class="section-subtitle animate-fadeIn" style="animation-delay: 0.2s;">
+                    Conheça as conquistas que marcaram a história do CONFLITO FC.
+                </p>
+                <div class="titulos-grid animate-fadeInUp" style="animation-delay: 0.4s;">
+                    <article class="titulo-card">
+                        <div class="titulo-header">
+                            <i class="fas fa-trophy titulo-trophy" aria-hidden="true"></i>
+                        </div>
+                        <div class="titulo-info">
+                            <h4 class="titulo-name">Copa Elite Pro</h4>
+                            <p class="titulo-year">2025</p>
+                            <p class="titulo-description">Conquistamos a Copa Elite Pro em uma campanha invicta, destacando-nos como a equipe mais dominante da temporada.</p>
+                        </div>
+                    </article>
+                    <article class="titulo-card">
+                        <div class="titulo-header">
+                            <i class="fas fa-trophy titulo-trophy" aria-hidden="true"></i>
+                        </div>
+                        <div class="titulo-info">
+                            <h4 class="titulo-name">Liga Nacional Pro Clubs</h4>
+                            <p class="titulo-year">2025</p>
+                            <p class="titulo-description">Vencemos a Liga Nacional com uma série de vitórias emocionantes, solidificando nosso lugar entre os melhores.</p>
+                        </div>
+                    </article>
+                    <article class="titulo-card">
+                        <div class="titulo-header">
+                            <i class="fas fa-trophy titulo-trophy" aria-hidden="true"></i>
+                        </div>
+                        <div class="titulo-info">
+                            <h4 class="titulo-name">Torneio de Verão</h4>
+                            <p class="titulo-year">2025</p>
+                            <p class="titulo-description">Dominamos o Torneio de Verão, mostrando nosso talento e trabalho em equipe em partidas memoráveis.</p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+        <section id="banner" class="banner-section section" tabindex="-1">
+            <video class="section-video" autoplay loop muted playsinline>
+                <source src="" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <div class="container section-content">
+                <h2 class="section-title animate-fadeIn">Banner do Clube</h2>
+                <p class="section-subtitle animate-fadeIn" style="animation-delay: 0.2s;">
+                    Veja o banner oficial do CONFLITO FC, representando nossa identidade e paixão.
+                </p>
+                <div class="banner-content animate-fadeInUp" style="animation-delay: 0.4s;">
+                    <div class="banner-image">
+                        <img src="WhatsApp Image 2025-10-10 at 00.25.40.jpeg" alt="Banner oficial do CONFLITO FC com o escudo e cores do clube" loading="lazy">
+                    </div>
+                    <p class="banner-description">
+                        Nosso banner oficial encapsula a essência do CONFLITO FC: força, paixão e união. Com o escudo em destaque e as cores vermelho e preto, ele representa nossa identidade no cenário do Pro Clubs. Criado para inspirar jogadores e torcedores, o banner é um símbolo de nossa busca incessante por vitórias.
+                    </p>
+                </div>
+            </div>
+        </section>
         <section id="elenco" class="elenco-section section" tabindex="-1">
             <video class="section-video" autoplay loop muted playsinline>
                 <source src="3722209-hd_1920_1080_25fps.mp4" type="video/mp4">
@@ -945,7 +1107,6 @@
                 <p class="section-subtitle animate-fadeIn" style="animation-delay: 0.2s;">
                     Conheça os guerreiros que vestem a camisa e carregam o escudo do CONFLITO FC.
                 </p>
-
                 <!-- Goleiros -->
                 <div class="position-group animate-fadeInUp" style="animation-delay: 0.4s;">
                     <h3 class="position-title">Atacantes</h3>
@@ -970,7 +1131,6 @@
                                 </div>
                             </div>
                         </article>
-
                         <article class="player-card">
                             <div class="player-header">
                                 <div class="player-avatar">
@@ -993,7 +1153,6 @@
                         </article>
                     </div>
                 </div>
-
                 <!-- Zagueiros -->
                 <div class="position-group animate-fadeInUp" style="animation-delay: 0.6s;">
                     <h3 class="position-title">Zagueiros</h3>
@@ -1020,7 +1179,6 @@
                         </article>
                     </div>
                 </div>
-
                 <!-- Meio-Campistas -->
                 <div class="position-group animate-fadeInUp" style="animation-delay: 0.8s;">
                     <h3 class="position-title">Meio-Campistas</h3>
@@ -1047,7 +1205,6 @@
                         </article>
                     </div>
                 </div>
-
                 <!-- Atacantes -->
                 <div class="position-group animate-fadeInUp" style="animation-delay: 1.0s;">
                     <h3 class="position-title">Atacantes</h3>
@@ -1096,7 +1253,6 @@
                 </div>
             </div>
         </section>
-
         <section id="redes" class="redes-section section" tabindex="-1">
             <video class="section-video" autoplay loop muted playsinline>
                 <source src="3722209-hd_1920_1080_25fps.mp4" type="video/mp4">
@@ -1130,14 +1286,12 @@
             </div>
         </section>
     </main>
-
     <footer class="footer">
         <div class="footer-content">
             <p>&copy; 2025 CONFLITO FC - Pro Clubs.</p>
             <p>Desenvolvido com <i class="fas fa-heart footer-heart" aria-hidden="true"></i> por <a href="mailto:dev.barbosa02@gmail.com" style="color: var(--neutral-300);">dev.barbosa02@gmail.com</a></p>
         </div>
     </footer>
-
     <div id="recrutar-modal" class="modal" role="dialog" aria-labelledby="modal-title" aria-hidden="true">
         <div class="modal-content">
             <span class="close-btn" onclick="closeModal('recrutar-modal')" aria-label="Fechar modal">&times;</span>
@@ -1218,7 +1372,6 @@
             <p class="whatsapp-disclaimer">Ao clicar, você será redirecionado para o WhatsApp para enviar as informações.</p>
         </div>
     </div>
-
     <script>
         // Inicializar Typed.js
         function initTyped() {
@@ -1234,7 +1387,6 @@
                 console.error("Typed.js não carregado corretamente.");
             }
         }
-
         // Animação de Contadores
         function animateCounter(element, target) {
             let start = 0;
@@ -1253,7 +1405,6 @@
                 }
             }, stepTime);
         }
-
         // Observador de Interseção
         const options = {
             root: null,
@@ -1275,7 +1426,6 @@
                 }
             });
         }, options);
-
         // Modal
         function openModal(id) {
             const modal = document.getElementById(id);
@@ -1295,7 +1445,6 @@
                 closeModal('recrutar-modal');
             }
         }
-
         // Formulário de Recrutamento
         document.getElementById('recrutamento-form').addEventListener('submit', function(event) {
             event.preventDefault();
@@ -1325,19 +1474,16 @@
             const numeroWhatsapp = '5551992520046';
             const mensagem = `
 *🚀 Novo Candidato ao CONFLITO FC!*
-
 *Informações Pessoais:*
 Nome: ${nome}
 ID: ${id_jogo}
 Idade: ${idade}
 Discord: ${discord}
-
 *Requisitos de Jogo:*
 Posição: ${posicao}
 Plataforma: ${plataforma}
 Dias: ${dias}
 Horário (Início): ${horario}
-
 *Por favor, responda a esta mensagem no WhatsApp.*
 `;
             const mensagemCodificada = encodeURIComponent(mensagem);
@@ -1346,7 +1492,6 @@ Horário (Início): ${horario}
             closeModal('recrutar-modal');
             form.reset();
         });
-
         // Inicialização
         document.addEventListener('DOMContentLoaded', () => {
             initTyped();
