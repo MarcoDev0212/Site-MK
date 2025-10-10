@@ -6,20 +6,13 @@
     <meta name="description" content="CONFLITO FC - O clube elite de Pro Clubs. Junte-se à nossa equipe e conquiste títulos!">
     <meta name="keywords" content="Pro Clubs, futebol virtual, CONFLITO FC, recrutamento, esports">
     <meta name="author" content="CONFLITO FC">
-    <!-- SEO Enhancements: Open Graph and Twitter Card -->
-    <meta property="og:title" content="CONFLITO FC | Site Oficial">
-    <meta property="og:description" content="CONFLITO FC - O clube elite de Pro Clubs. Junte-se à nossa equipe e conquiste títulos!">
-    <meta property="og:image" content="https://images.unsplash.com/photo-1551286399-d6b4066693e3?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80">
-    <meta property="og:url" content="https://conflitofc.com">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="CONFLITO FC | Site Oficial">
-    <meta name="twitter:description" content="CONFLITO FC - O clube elite de Pro Clubs. Junte-se à nossa equipe e conquiste títulos!">
-    <meta name="twitter:image" content="https://images.unsplash.com/photo-1551286399-d6b4066693e3?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80">
     <title>Conflito FC | Site Oficial</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js"></script>
+   
     <style>
+        /* Variáveis e Reset CSS */
         :root {
             --primary: #0f172a;
             --secondary: #dc2626;
@@ -62,6 +55,7 @@
             overflow-x: hidden;
             position: relative;
         }
+        /* Animações */
         @keyframes fadeIn { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
         @keyframes fadeInUp { from { opacity: 0; transform: translateY(50px); } to { opacity: 1; transform: translateY(0); } }
         @keyframes slideInLeft { from { opacity: 0; transform: translateX(-50px); } to { opacity: 1; transform: translateX(0); } }
@@ -79,14 +73,7 @@
         .animate-scaleIn { animation: scaleIn 0.6s ease-out forwards; }
         .animate-pulse { animation: pulse 2s infinite; }
         .animate-float { animation: float 3s ease-in-out infinite; }
-        /* Added animation delay classes */
-        .animate-delay-02 { animation-delay: 0.2s; }
-        .animate-delay-04 { animation-delay: 0.4s; }
-        .animate-delay-06 { animation-delay: 0.6s; }
-        .animate-delay-08 { animation-delay: 0.8s; }
-        .animate-delay-10 { animation-delay: 1.0s; }
-        .animate-delay-12 { animation-delay: 1.2s; }
-        .animate-delay-14 { animation-delay: 1.4s; }
+        /* Utilitários */
         .container { max-width: var(--container-max); margin: 0 auto; padding: 0 1rem; }
         .section {
             position: relative;
@@ -107,7 +94,6 @@
             height: 100%;
             object-fit: cover;
             z-index: -1;
-            opacity: 0.8; /* Optimized for performance */
         }
         .section-content {
             position: relative;
@@ -147,7 +133,7 @@
             position: relative;
             overflow: hidden;
         }
-        .btn-primary::before, .btn-secondary::before, .btn-outline::before {
+        .btn::before {
             content: '';
             position: absolute;
             top: 0;
@@ -157,9 +143,7 @@
             background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
             transition: left 0.5s;
         }
-        .btn-primary:hover::before, .btn-secondary:hover::before, .btn-outline:hover::before {
-            left: 100%;
-        }
+        .btn:hover::before { left: 100%; }
         .btn-primary {
             background: var(--gradient-secondary);
             color: var(--white);
@@ -189,6 +173,7 @@
             color: var(--white);
             border-color: var(--neutral-900);
         }
+        /* Header e Navegação */
         .header {
             position: fixed;
             top: 0;
@@ -277,6 +262,7 @@
             transition: var(--transition);
         }
         .mobile-menu-btn:hover { color: var(--neutral-100); }
+        /* Hero Section */
         .hero {
             position: relative;
             min-height: 80vh;
@@ -308,28 +294,28 @@
             font-size: clamp(1rem, 2.5vw, 1.25rem);
             margin-bottom: 1.5rem;
             opacity: 0.9;
-            animation: fadeInUp 1s ease-out;
+            animation: fadeInUp 1s ease-out 0.2s both;
         }
         .hero-description {
             font-size: 0.9rem;
             max-width: 90%;
             margin: 0 auto 2rem;
             opacity: 0.8;
-            animation: fadeInUp 1s ease-out;
+            animation: fadeInUp 1s ease-out 0.4s both;
         }
         .hero-buttons {
             display: flex;
             gap: 0.75rem;
             justify-content: center;
             flex-wrap: wrap;
-            animation: fadeInUp 1s ease-out;
+            animation: fadeInUp 1s ease-out 0.6s both;
         }
         .hero-stats {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
             gap: 1rem;
             margin-top: 2rem;
-            animation: fadeInUp 1s ease-out;
+            animation: fadeInUp 1s ease-out 0.8s both;
         }
         .hero-stat {
             text-align: center;
@@ -372,6 +358,8 @@
             position: relative;
             z-index: 2;
         }
+        /* Clube Section */
+        .clube-section 
         .about-grid {
             display: grid;
             grid-template-columns: 1fr;
@@ -453,6 +441,7 @@
             position: relative;
             z-index: 2;
         }
+        /* Títulos Section */
         .titulos-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -492,18 +481,21 @@
             justify-content: center;
             overflow: hidden;
         }
-        .titulo-trophy {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
+        .titulo-header::before {
+            content: '';
             position: absolute;
             top: 0;
             left: 0;
-            z-index: 2;
+            right: 0;
+            bottom: 0;
+            background: url('https://images.unsplash.com/photo-1543339308-43e59d6b73a6?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80') center/cover;
+            opacity: 0.2;
         }
-        .titulo-card:hover .titulo-trophy {
-            transform: scale(1.05);
-            transition: transform 0.3s ease;
+        .titulo-trophy {
+            position: relative;
+            z-index: 2;
+            font-size: 3rem;
+            color: var(--accent);
         }
         .titulo-info {
             padding: 1.5rem;
@@ -528,6 +520,7 @@
             margin-bottom: 1rem;
             line-height: 1.4;
         }
+        /* Banner Section */
         .banner-content {
             max-width: 800px;
             margin: 0 auto;
@@ -553,27 +546,12 @@
             color: var(--white);
             line-height: 1.6;
         }
+        /* Elenco Section */
+        .elenco-section 
         .players-grid {
-            display: flex;
-            flex-wrap: nowrap;
-            overflow-x: auto;
-            scroll-snap-type: x mandatory;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 1rem;
-            width: 100%;
-            scroll-behavior: smooth;
-            padding-bottom: 1rem;
-            -webkit-overflow-scrolling: touch;
-            touch-action: pan-x;
-        }
-        .players-grid::-webkit-scrollbar {
-            height: 8px;
-        }
-        .players-grid::-webkit-scrollbar-thumb {
-            background: var(--neutral-400);
-            border-radius: 4px;
-        }
-        .players-grid::-webkit-scrollbar-track {
-            background: var(--neutral-800);
         }
         .player-card {
             background: rgba(255, 255, 255, 0.95);
@@ -583,9 +561,6 @@
             transition: var(--transition);
             border: 1px solid var(--neutral-200);
             position: relative;
-            flex: 0 0 280px;
-            max-width: 280px;
-            scroll-snap-align: start;
         }
         .player-card::before {
             content: '';
@@ -684,6 +659,7 @@
             font-size: 0.75rem;
             color: var(--neutral-600);
         }
+        /* Estilo para grupos de posições */
         .position-group { margin-bottom: 2rem; }
         .position-title {
             font-family: var(--font-display);
@@ -703,45 +679,7 @@
             margin: 0.25rem auto 0;
             border-radius: 2px;
         }
-        .carousel {
-            position: relative;
-            width: 100%;
-            overflow: hidden;
-            padding: 0 50px;
-        }
-        .carousel-buttons {
-            display: flex;
-            justify-content: space-between;
-            position: absolute;
-            top: 50%;
-            width: 100%;
-            transform: translateY(-50%);
-            padding: 0 10px;
-            z-index: 3;
-        }
-        .carousel-button {
-            background: rgba(255, 255, 255, 0.2);
-            border: none;
-            border-radius: 50%;
-            width: 40px;
-            height: 40px;
-            color: var(--white);
-            font-size: 1.5rem;
-            cursor: pointer;
-            transition: var(--transition);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            backdrop-filter: blur(5px);
-        }
-        .carousel-button:hover {
-            background: rgba(255, 255, 255, 0.3);
-            transform: scale(1.1);
-        }
-        .carousel-button:disabled {
-            opacity: 0.5;
-            cursor: not-allowed;
-        }
+        /* Links Sociais dos Jogadores */
         .social-link {
             position: absolute;
             top: 10px;
@@ -768,6 +706,8 @@
             transform: scale(1.1) rotate(5deg);
             box-shadow: var(--shadow-md);
         }
+        /* Redes Section */
+        .redes-section 
         .social-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -822,6 +762,7 @@
             line-height: 1.4;
             font-size: 0.9rem;
         }
+        /* Footer */
         .footer {
             background: rgba(15, 23, 42, 0.9);
             color: var(--neutral-300);
@@ -831,6 +772,7 @@
         .footer-content { max-width: var(--container-max); margin: 0 auto; padding: 0 1rem; }
         .footer p { margin-bottom: 0.25rem; font-size: 0.9rem; }
         .footer-heart { color: var(--secondary); animation: pulse 2s infinite; }
+        /* Modal e Formulário */
         .modal {
             display: none;
             position: fixed;
@@ -923,6 +865,7 @@
             border-color: #dc2626 !important;
             box-shadow: 0 0 0 3px rgba(220, 38, 38, 0.1) !important;
         }
+        /* Responsividade */
         @media (max-width: 768px) {
             .nav-menu {
                 display: none;
@@ -943,11 +886,8 @@
             .hero-title { white-space: normal; border-right: none; }
             .about-grid { grid-template-columns: 1fr; }
             .about-image img { height: 200px; }
-            .hero-stats, .stats-grid, .social-grid, .titulos-grid { grid-template-columns: 1fr; }
+            .hero-stats, .stats-grid, .players-grid, .social-grid, .titulos-grid { grid-template-columns: 1fr; }
             .banner-image img { max-height: 300px; }
-            .carousel { padding: 0 40px; }
-            .carousel-buttons { padding: 0 5px; }
-            .player-card { flex: 0 0 250px; max-width: 250px; }
         }
         @media (max-width: 480px) {
             .container { padding: 0 0.5rem; }
@@ -979,10 +919,8 @@
             .titulo-description { font-size: 0.75rem; }
             .banner-image img { max-height: 250px; }
             .banner-description { font-size: 0.8rem; }
-            .carousel-button { width: 30px; height: 30px; font-size: 1rem; }
-            .carousel { padding: 0 30px; }
-            .player-card { flex: 0 0 220px; max-width: 220px; }
         }
+        /* Efeitos Adicionais */
         .shimmer {
             background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
             background-size: 200% 100%;
@@ -1000,6 +938,45 @@
             z-index: 10000;
         }
         .skip-link:focus { top: 6px; }
+
+        /* Ajuste no .titulo-header para garantir que a imagem ocupe todo o espaço */
+        .titulo-header {
+            position: relative;
+            height: 150px;
+            background: var(--gradient-primary); /* Mantém o gradiente como fallback */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden; /* Garante que a imagem não ultrapasse os limites */
+}
+
+        /* Remove o pseudo-elemento ::before se não for mais necessário */
+        .titulo-header::before {
+            content: none; /* Desativa o fundo com imagem, já que a imagem principal ocupará o espaço */
+}
+
+/* Ajuste na classe .titulo-trophy para preencher o espaço */
+.titulo-trophy {
+    width: 100%; /* Ocupa toda a largura do .titulo-header */
+    height: 100%; /* Ocupa toda a altura do .titulo-header */
+    object-fit: cover; /* Redimensiona a imagem para preencher o espaço, cortando se necessário */
+    position: absolute; /* Posiciona a imagem sobre o fundo */
+    top: 0;
+    left: 0;
+    z-index: 2; /* Garante que a imagem fique acima de outros elementos */
+}
+
+/* Opcional: Adicione transições para hover */
+.titulo-card:hover .titulo-trophy {
+    transform: scale(1.05); /* Efeito de zoom ao passar o mouse */
+    transition: transform 0.3s ease;
+}
+
+@media (max-width: 480px) {
+    .titulo-header {
+        height: 120px; /* Reduz a altura em telas menores */
+    }
+}
     </style>
 </head>
 <body>
@@ -1027,31 +1004,31 @@
     <main id="main-content">
         <section id="hero" class="hero section active" tabindex="-1">
             <video class="section-video" autoplay loop muted playsinline>
-                <source src="https://assets.mixkit.co/videos/preview/mixkit-soccer-player-kicks-the-ball-138-720p.mp4" type="video/mp4">
+                <source src="3192198-uhd_3840_2160_25fps.mp4" type="video/mp4">
                 Your browser does not support the video tag.
             </video>
             <div class="hero-content section-content">
                 <h1 class="hero-title animate-fadeInUp">
                     <span id="typed-text"></span>
                 </h1>
-                <p class="hero-subtitle animate-fadeInUp animate-delay-02">Onde a Paixão pelo Pro Clubs Encontra a Elite da Competição.</p>
-                <div class="hero-description animate-fadeInUp animate-delay-04">
+                <p class="hero-subtitle animate-fadeInUp">Onde a Paixão pelo Pro Clubs Encontra a Elite da Competição.</p>
+                <div class="hero-description animate-fadeInUp">
                     Somos o CONFLITO FC, uma equipe dedicada à excelência no Pro Clubs. Junte-se à nossa história de vitórias!
                 </div>
-                <div class="hero-buttons animate-fadeInUp animate-delay-06">
+                <div class="hero-buttons animate-fadeInUp">
                     <a href="#clube" class="btn btn-primary glow-effect">Conheça o Clube <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
                     <a href="#elenco" class="btn btn-secondary"><i class="fas fa-bullseye" aria-hidden="true"></i> Nosso Elenco</a>
                 </div>
-                <div class="hero-stats animate-fadeInUp animate-delay-08">
-                    <div class="hero-stat animate-fadeInUp animate-delay-10" role="img" aria-label="Estatísticas do clube">
+                <div class="hero-stats">
+                    <div class="hero-stat animate-fadeInUp" style="animation-delay: 1.0s;" role="img" aria-label="Estatísticas do clube">
                         <span class="hero-stat-number" data-target="1">0</span>
                         <span class="hero-stat-label">Títulos Conquistados</span>
                     </div>
-                    <div class="hero-stat animate-fadeInUp animate-delay-12" role="img" aria-label="Estatísticas do clube">
+                    <div class="hero-stat animate-fadeInUp" style="animation-delay: 1.2s;" role="img" aria-label="Estatísticas do clube">
                         <span class="hero-stat-number" data-target="50">0</span>+
                         <span class="hero-stat-label">Vitórias na Temporada</span>
                     </div>
-                    <div class="hero-stat animate-fadeInUp animate-delay-14" role="img" aria-label="Estatísticas do clube">
+                    <div class="hero-stat animate-fadeInUp" style="animation-delay: 1.4s;" role="img" aria-label="Estatísticas do clube">
                         <span class="hero-stat-number" data-target="95">0</span>%
                         <span class="hero-stat-label">Taxa de Sucesso</span>
                     </div>
@@ -1060,15 +1037,15 @@
         </section>
         <section id="clube" class="clube-section section" tabindex="-1">
             <video class="section-video" autoplay loop muted playsinline>
-                <source src="https://assets.mixkit.co/videos/preview/mixkit-soccer-player-kicks-the-ball-138-720p.mp4" type="video/mp4">
+                <source src="3722209-hd_1920_1080_25fps.mp4" type="video/mp4">
                 Your browser does not support the video tag.
             </video>
             <div class="container section-content">
                 <h2 class="section-title animate-fadeIn">O Legado CONFLITO FC</h2>
-                <p class="section-subtitle animate-fadeIn animate-delay-02">
+                <p class="section-subtitle animate-fadeIn" style="animation-delay: 0.2s;">
                     Nossa história, missão e os números que comprovam nossa dedicação e sucesso.
                 </p>
-                <div class="about-grid animate-fadeInUp animate-delay-04">
+                <div class="about-grid animate-fadeInUp" style="animation-delay: 0.4s;">
                     <div class="about-content">
                         <h3>Nossa História e Missão</h3>
                         <p>Fundado em 2025, o CONFLITO FC nasceu com a visão de ser o clube mais organizado e vitorioso no cenário brasileiro de Pro Clubs. Cultivamos um ambiente de respeito, competitividade e amizade, sempre mirando o topo das ligas. Nossa missão é clara: <strong>Dominar o Jogo</strong>.</p>
@@ -1079,7 +1056,7 @@
                         <img src="https://images.unsplash.com/photo-1559774918-58694e8a553f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Foto da equipe do CONFLITO FC em ação no campo" loading="lazy">
                     </div>
                 </div>
-                <div class="stats-grid animate-fadeInUp animate-delay-06">
+                <div class="stats-grid animate-fadeInUp" style="animation-delay: 0.6s;">
                     <div class="stat-card">
                         <div class="stat-number" data-target="100">0</div>
                         <div class="stat-label">Gols Marcados</div>
@@ -1096,62 +1073,62 @@
             </div>
         </section>
         <section id="titulos" class="titulos-section section" tabindex="-1">
-            <video class="section-video" autoplay loop muted playsinline>
-                <source src="https://assets.mixkit.co/videos/preview/mixkit-soccer-player-kicks-the-ball-138-720p.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
-            <div class="container section-content">
-                <h2 class="section-title animate-fadeIn">Nossos Títulos</h2>
-                <p class="section-subtitle animate-fadeIn animate-delay-02">
-                    Conheça as conquistas que marcaram a história do CONFLITO FC.
-                </p>
-                <div class="titulos-grid animate-fadeInUp animate-delay-04">
-                    <article class="titulo-card">
-                        <div class="titulo-header">
-                            <img src="https://images.unsplash.com/photo-1579952363873-27f3b8d94ad3?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Troféu da Copa Elite Pro" class="titulo-trophy">
-                        </div>
-                        <div class="titulo-info">
-                            <h4 class="titulo-name">Copa Elite Pro</h4>
-                            <p class="titulo-year">2025</p>
-                            <p class="titulo-description">Conquistamos a Copa Elite Pro em uma campanha invicta, destacando-nos como a equipe mais dominante da temporada.</p>
-                        </div>
-                    </article>
-                    <article class="titulo-card">
-                        <div class="titulo-header">
-                            <img src="https://images.unsplash.com/photo-1579952363873-27f3b8d94ad3?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Troféu da Liga Nacional Pro Clubs" class="titulo-trophy">
-                        </div>
-                        <div class="titulo-info">
-                            <h4 class="titulo-name">Liga Nacional Pro Clubs</h4>
-                            <p class="titulo-year">2025</p>
-                            <p class="titulo-description">Vencemos a Liga Nacional com uma série de vitórias emocionantes, solidificando nosso lugar entre os melhores.</p>
-                        </div>
-                    </article>
-                    <article class="titulo-card">
-                        <div class="titulo-header">
-                            <img src="https://images.unsplash.com/photo-1579952363873-27f3b8d94ad3?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Troféu do Torneio de Verão" class="titulo-trophy">
-                        </div>
-                        <div class="titulo-info">
-                            <h4 class="titulo-name">Torneio de Verão</h4>
-                            <p class="titulo-year">2025</p>
-                            <p class="titulo-description">Dominamos o Torneio de Verão, mostrando nosso talento e trabalho em equipe em partidas memoráveis.</p>
-                        </div>
-                    </article>
+    <video class="section-video" autoplay loop muted playsinline>
+        <source src="3722209-hd_1920_1080_25fps.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    <div class="container section-content">
+        <h2 class="section-title animate-fadeIn">Nossos Títulos</h2>
+        <p class="section-subtitle animate-fadeIn" style="animation-delay: 0.2s;">
+            Conheça as conquistas que marcaram a história do CONFLITO FC.
+        </p>
+        <div class="titulos-grid animate-fadeInUp" style="animation-delay: 0.4s;">
+            <article class="titulo-card">
+                <div class="titulo-header">
+                    <img src="WhatsApp Image 2025-10-10 at 00.25.40.jpeg" alt="Troféu da Copa Elite Pro" class="titulo-trophy">
                 </div>
+                <div class="titulo-info">
+                    <h4 class="titulo-name">Copa Elite Pro</h4>
+                    <p class="titulo-year">2025</p>
+                    <p class="titulo-description">Conquistamos a Copa Elite Pro em uma campanha invicta, destacando-nos como a equipe mais dominante da temporada.</p>
+                </div>
+            </article>
+            <article class="titulo-card">
+                <div class="titulo-header">
+                    <img src="WhatsApp Image 2025-10-10 at 00.25.40.jpeg" alt="Troféu da Liga Nacional Pro Clubs" class="titulo-trophy">
+                </div>
+                <div class="titulo-info">
+                    <h4 class="titulo-name">Liga Nacional Pro Clubs</h4>
+                    <p class="titulo-year">2025</p>
+                    <p class="titulo-description">Vencemos a Liga Nacional com uma série de vitórias emocionantes, solidificando nosso lugar entre os melhores.</p>
+                </div>
+            </article>
+            <article class="titulo-card">
+                <div class="titulo-header">
+                    <img src="WhatsApp Image 2025-10-10 at 00.25.40.jpeg" alt="Troféu do Torneio de Verão" class="titulo-trophy">
+                </div>
+                <div class="titulo-info">
+                    <h4 class="titulo-name">Torneio de Verão</h4>
+                    <p class="titulo-year">2025</p>
+                    <p class="titulo-description">Dominamos o Torneio de Verão, mostrando nosso talento e trabalho em equipe em partidas memoráveis.</p>
+                </div>
+              </article>
             </div>
+          </div>
         </section>
         <section id="banner" class="banner-section section" tabindex="-1">
             <video class="section-video" autoplay loop muted playsinline>
-                <source src="https://assets.mixkit.co/videos/preview/mixkit-soccer-player-kicks-the-ball-138-720p.mp4" type="video/mp4">
+                <source src="" type="video/mp4">
                 Your browser does not support the video tag.
             </video>
             <div class="container section-content">
                 <h2 class="section-title animate-fadeIn">Banner do Clube</h2>
-                <p class="section-subtitle animate-fadeIn animate-delay-02">
+                <p class="section-subtitle animate-fadeIn" style="animation-delay: 0.2s;">
                     Veja o banner oficial do CONFLITO FC, representando nossa identidade e paixão.
                 </p>
-                <div class="banner-content animate-fadeInUp animate-delay-04">
+                <div class="banner-content animate-fadeInUp" style="animation-delay: 0.4s;">
                     <div class="banner-image">
-                        <img src="https://images.unsplash.com/photo-1551286399-d6b4066693e3?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Banner oficial do CONFLITO FC com o escudo e cores do clube" loading="lazy">
+                        <img src="WhatsApp Image 2025-10-10 at 00.25.40.jpeg" alt="Banner oficial do CONFLITO FC com o escudo e cores do clube" loading="lazy">
                     </div>
                     <p class="banner-description">
                         Nosso banner oficial encapsula a essência do CONFLITO FC: força, paixão e união. Com o escudo em destaque e as cores vermelho e preto, ele representa nossa identidade no cenário do Pro Clubs. Criado para inspirar jogadores e torcedores, o banner é um símbolo de nossa busca incessante por vitórias.
@@ -1161,175 +1138,171 @@
         </section>
         <section id="elenco" class="elenco-section section" tabindex="-1">
             <video class="section-video" autoplay loop muted playsinline>
-                <source src="https://assets.mixkit.co/videos/preview/mixkit-soccer-player-kicks-the-ball-138-720p.mp4" type="video/mp4">
+                <source src="3722209-hd_1920_1080_25fps.mp4" type="video/mp4">
                 Your browser does not support the video tag.
             </video>
             <div class="container section-content">
                 <h2 class="section-title animate-fadeIn">Nosso Elenco do Conflito</h2>
-                <p class="section-subtitle animate-fadeIn animate-delay-02">
+                <p class="section-subtitle animate-fadeIn" style="animation-delay: 0.2s;">
                     Conheça os guerreiros que vestem a camisa e carregam o escudo do CONFLITO FC.
                 </p>
                 <!-- Goleiros -->
-                <div class="position-group animate-fadeInUp animate-delay-04">
-                    <h3 class="position-title">Goleiros</h3>
-                    <div class="carousel">
-                        <div class="players-grid">
-                            <article class="player-card">
-                                <div class="player-header">
-                                    <div class="player-avatar">
-                                        <img src="https://images.unsplash.com/photo-1600210492493-0946911123ea?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Foto de TheWallKeeper, goleiro do CONFLITO FC" loading="lazy">
-                                    </div>
+                <div class="position-group animate-fadeInUp" style="animation-delay: 0.4s;">
+                    <h3 class="position-title">Atacantes</h3>
+                    <div class="players-grid">
+                        <article class="player-card">
+                            <div class="player-header">
+                                <div class="player-avatar">
+                                    <img src="https://images.unsplash.com/photo-1600210492493-0946911123ea?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Foto de TheWallKeeper, goleiro do CONFLITO FC" loading="lazy">
                                 </div>
-                                <div class="player-info">
-                                    <h4 class="player-name">TheWallKeeper</h4>
-                                    <p class="player-position">Goleiro (GOL)</p>
-                                    <a href="https://instagram.com/thewallkeeper" target="_blank" rel="noopener noreferrer" class="social-link instagram-link" aria-label="Instagram de TheWallKeeper">
-                                        <i class="fa-brands fa-instagram" aria-hidden="true"></i>
-                                    </a>
-                                    <p class="player-description">O paredão do CONFLITO FC, com reflexos rápidos e defesas impossíveis.</p>
-                                    <div class="player-stats">
-                                        <div class="player-stat"><div class="player-stat-value">9.2</div><div class="player-stat-label">Média</div></div>
-                                        <div class="player-stat"><div class="player-stat-value">45</div><div class="player-stat-label">Defesas</div></div>
-                                        <div class="player-stat"><div class="player-stat-value">10</div><div class="player-stat-label">Clean Sheets</div></div>
-                                    </div>
+                            </div>
+                            <div class="player-info">
+                                <h4 class="player-name">Braga</h4>
+                                <p class="player-position">Atacante (ATA)</p>
+                                <a href="https://instagram.com/thewallkeeper" target="_blank" rel="noopener noreferrer" class="social-link instagram-link" aria-label="Instagram de TheWallKeeper">
+                                    <i class="fa-brands fa-instagram" aria-hidden="true"></i>
+                                </a>
+                                <p class="player-description">Fintou, passou, marcou — é nosso raio</p>
+                                <div class="player-stats">
+                                    <div class="player-stat"><div class="player-stat-value">09</div><div class="player-stat-label">Camisa</div></div>
+                                    <div class="player-stat"><div class="player-stat-value">60</div><div class="player-stat-label">Gols</div></div>
+                                    <div class="player-stat"><div class="player-stat-value"></div><div class="player-stat-label">Assistencias</div></div>
                                 </div>
-                            </article>
-                        </div>
-                        <div class="carousel-buttons">
-                            <button class="carousel-button prev" aria-label="Jogador anterior"><i class="fas fa-chevron-left"></i></button>
-                            <button class="carousel-button next" aria-label="Próximo jogador"><i class="fas fa-chevron-right"></i></button>
-                        </div>
+                            </div>
+                        </article>
+                        <article class="player-card">
+                            <div class="player-header">
+                                <div class="player-avatar">
+                                    <img src="https://images.unsplash.com/photo-1607783616288-517192e77445?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Foto de BellHome, atacante do CONFLITO FC" loading="lazy">
+                                </div>
+                            </div>
+                            <div class="player-info">
+                                <h4 class="player-name">BellHome</h4>
+                                <p class="player-position">Atacante (ATA)</p>
+                                <a href="https://instagram.com/bellhome_fc" target="_blank" rel="noopener noreferrer" class="social-link instagram-link" aria-label="Instagram de BellHome">
+                                    <i class="fa-brands fa-instagram" aria-hidden="true"></i>
+                                </a>
+                                <p class="player-description">Rápido, leve e letal!</p>
+                                <div class="player-stats">
+                                    <div class="player-stat"><div class="player-stat-value">02</div><div class="player-stat-label">Camisa</div></div>
+                                    <div class="player-stat"><div class="player-stat-value">35</div><div class="player-stat-label">Gols</div></div>
+                                    <div class="player-stat"><div class="player-stat-value">15</div><div class="player-stat-label">Assistências</div></div>
+                                </div>
+                            </div>
+                        </article>
                     </div>
                 </div>
                 <!-- Zagueiros -->
-                <div class="position-group animate-fadeInUp animate-delay-06">
+                <div class="position-group animate-fadeInUp" style="animation-delay: 0.6s;">
                     <h3 class="position-title">Zagueiros</h3>
-                    <div class="carousel">
-                        <div class="players-grid">
-                            <article class="player-card">
-                                <div class="player-header">
-                                    <div class="player-avatar">
-                                        <img src="https://images.unsplash.com/photo-1607783616288-517192e77445?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Foto de Muro_Defesa, zagueiro do CONFLITO FC" loading="lazy">
-                                    </div>
+                    <div class="players-grid">
+                        <article class="player-card">
+                            <div class="player-header">
+                                <div class="player-avatar">
+                                    <img src="https://images.unsplash.com/photo-1607783616288-517192e77445?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Foto de Muro_Defesa, zagueiro do CONFLITO FC" loading="lazy">
                                 </div>
-                                <div class="player-info">
-                                    <h4 class="player-name">Muro_Defesa</h4>
-                                    <p class="player-position">Zagueiro (CB)</p>
-                                    <a href="https://instagram.com/murodefesa" target="_blank" rel="noopener noreferrer" class="social-link instagram-link" aria-label="Instagram de Muro_Defesa">
-                                        <i class="fa-brands fa-instagram" aria-hidden="true"></i>
-                                    </a>
-                                    <p class="player-description">A muralha. Forte no desarme, excelente no jogo aéreo e voz de comando na defesa.</p>
-                                    <div class="player-stats">
-                                        <div class="player-stat"><div class="player-stat-value">8.8</div><div class="player-stat-label">Média</div></div>
-                                        <div class="player-stat"><div class="player-stat-value">50</div><div class="player-stat-label">Desarmes</div></div>
-                                        <div class="player-stat"><div class="player-stat-value">98</div><div class="player-stat-label">Passes</div></div>
-                                    </div>
+                            </div>
+                            <div class="player-info">
+                                <h4 class="player-name">Muro_Defesa</h4>
+                                <p class="player-position">Zagueiro (CB)</p>
+                                <a href="https://instagram.com/murodefesa" target="_blank" rel="noopener noreferrer" class="social-link instagram-link" aria-label="Instagram de Muro_Defesa">
+                                    <i class="fa-brands fa-instagram" aria-hidden="true"></i>
+                                </a>
+                                <p class="player-description">A muralha. Forte no desarme, excelente no jogo aéreo e voz de comando na defesa.</p>
+                                <div class="player-stats">
+                                    <div class="player-stat"><div class="player-stat-value">8.8</div><div class="player-stat-label">Média</div></div>
+                                    <div class="player-stat"><div class="player-stat-value">50</div><div class="player-stat-label">Desarmes</div></div>
+                                    <div class="player-stat"><div class="player-stat-value">98</div><div class="player-stat-label">Passes</div></div>
                                 </div>
-                            </article>
-                        </div>
-                        <div class="carousel-buttons">
-                            <button class="carousel-button prev" aria-label="Jogador anterior"><i class="fas fa-chevron-left"></i></button>
-                            <button class="carousel-button next" aria-label="Próximo jogador"><i class="fas fa-chevron-right"></i></button>
-                        </div>
+                            </div>
+                        </article>
                     </div>
                 </div>
                 <!-- Meio-Campistas -->
-                <div class="position-group animate-fadeInUp animate-delay-08">
+                <div class="position-group animate-fadeInUp" style="animation-delay: 0.8s;">
                     <h3 class="position-title">Meio-Campistas</h3>
-                    <div class="carousel">
-                        <div class="players-grid">
-                            <article class="player-card">
-                                <div class="player-header">
-                                    <div class="player-avatar">
-                                        <img src="https://images.unsplash.com/photo-1611003229184-018b9f6e182e?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Foto de Markito10_, meio-campista do CONFLITO FC" loading="lazy">
-                                    </div>
+                    <div class="players-grid">
+                        <article class="player-card">
+                            <div class="player-header">
+                                <div class="player-avatar">
+                                    <img src="https://images.unsplash.com/photo-1611003229184-018b9f6e182e?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Foto de Markito10_, meio-campista do CONFLITO FC" loading="lazy">
                                 </div>
-                                <div class="player-info">
-                                    <h4 class="player-name">Markito10</h4>
-                                    <p class="player-position">Meio-Campista (MEI)</p>
-                                    <a href="https://instagram.com/markito10_" target="_blank" rel="noopener noreferrer" class="social-link instagram-link" aria-label="Instagram de Markito10_">
-                                        <i class="fa-brands fa-instagram" aria-hidden="true"></i>
-                                    </a>
-                                    <p class="player-description">Maestro Pifador</p>
-                                    <div class="player-stats">
-                                        <div class="player-stat"><div class="player-stat-value">10</div><div class="player-stat-label">Camisa</div></div>
-                                        <div class="player-stat"><div class="player-stat-value">55</div><div class="player-stat-label">Gols</div></div>
-                                        <div class="player-stat"><div class="player-stat-value">40</div><div class="player-stat-label">Assistências</div></div>
-                                    </div>
+                            </div>
+                            <div class="player-info">
+                                <h4 class="player-name">Markito10</h4>
+                                <p class="player-position">Meio-Campista (MEI)</p>
+                                <a href="https://instagram.com/markito10_" target="_blank" rel="noopener noreferrer" class="social-link instagram-link" aria-label="Instagram de Markito10_">
+                                    <i class="fa-brands fa-instagram" aria-hidden="true"></i>
+                                </a>
+                                <p class="player-description">Maestro Pifador</p>
+                                <div class="player-stats">
+                                    <div class="player-stat"><div class="player-stat-value">10</div><div class="player-stat-label">Camisa</div></div>
+                                    <div class="player-stat"><div class="player-stat-value">55</div><div class="player-stat-label">Gols</div></div>
+                                    <div class="player-stat"><div class="player-stat-value">40</div><div class="player-stat-label">Assistências</div></div>
                                 </div>
-                            </article>
-                        </div>
-                        <div class="carousel-buttons">
-                            <button class="carousel-button prev" aria-label="Jogador anterior"><i class="fas fa-chevron-left"></i></button>
-                            <button class="carousel-button next" aria-label="Próximo jogador"><i class="fas fa-chevron-right"></i></button>
-                        </div>
+                            </div>
+                        </article>
                     </div>
                 </div>
                 <!-- Atacantes -->
-                <div class="position-group animate-fadeInUp animate-delay-10">
+                <div class="position-group animate-fadeInUp" style="animation-delay: 1.0s;">
                     <h3 class="position-title">Atacantes</h3>
-                    <div class="carousel">
-                        <div class="players-grid">
-                            <article class="player-card">
-                                <div class="player-header">
-                                    <div class="player-avatar">
-                                        <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Foto de Braga, atacante do CONFLITO FC" loading="lazy">
-                                    </div>
+                    <div class="players-grid">
+                        <article class="player-card">
+                            <div class="player-header">
+                                <div class="player-avatar">
+                                    <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Foto de Braga, atacante do CONFLITO FC" loading="lazy">
                                 </div>
-                                <div class="player-info">
-                                    <h4 class="player-name">Braga</h4>
-                                    <p class="player-position">Atacante (ATA)</p>
-                                    <a href="https://instagram.com/braga_fc" target="_blank" rel="noopener noreferrer" class="social-link instagram-link" aria-label="Instagram de Braga">
-                                        <i class="fa-brands fa-instagram" aria-hidden="true"></i>
-                                    </a>
-                                    <p class="player-description">Fintou, passou, marcou — é nosso raio</p>
-                                    <div class="player-stats">
-                                        <div class="player-stat"><div class="player-stat-value">09</div><div class="player-stat-label">Camisa</div></div>
-                                        <div class="player-stat"><div class="player-stat-value">45</div><div class="player-stat-label">Gols</div></div>
-                                        <div class="player-stat"><div class="player-stat-value">09</div><div class="player-stat-label">Assistências</div></div>
-                                    </div>
+                            </div>
+                            <div class="player-info">
+                                <h4 class="player-name">Braga</h4>
+                                <p class="player-position">Atacante (ATA)</p>
+                                <a href="https://instagram.com/braga_fc" target="_blank" rel="noopener noreferrer" class="social-link instagram-link" aria-label="Instagram de Braga">
+                                    <i class="fa-brands fa-instagram" aria-hidden="true"></i>
+                                </a>
+                                <p class="player-description">Fintou, passou, marcou — é nosso raio</p>
+                                <div class="player-stats">
+                                    <div class="player-stat"><div class="player-stat-value">09</div><div class="player-stat-label">Camisa</div></div>
+                                    <div class="player-stat"><div class="player-stat-value">45</div><div class="player-stat-label">Gols</div></div>
+                                    <div class="player-stat"><div class="player-stat-value">09</div><div class="player-stat-label">Assistências</div></div>
                                 </div>
-                            </article>
-                            <article class="player-card">
-                                <div class="player-header">
-                                    <div class="player-avatar">
-                                        <img src="https://images.unsplash.com/photo-1607783616288-517192e77445?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Foto de BellHome, atacante do CONFLITO FC" loading="lazy">
-                                    </div>
+                            </div>
+                        </article>
+                        <article class="player-card">
+                            <div class="player-header">
+                                <div class="player-avatar">
+                                    <img src="https://images.unsplash.com/photo-1607783616288-517192e77445?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Foto de BellHome, atacante do CONFLITO FC" loading="lazy">
                                 </div>
-                                <div class="player-info">
-                                    <h4 class="player-name">BellHome</h4>
-                                    <p class="player-position">Atacante (ATA)</p>
-                                    <a href="https://instagram.com/bellhome_fc" target="_blank" rel="noopener noreferrer" class="social-link instagram-link" aria-label="Instagram de BellHome">
-                                        <i class="fa-brands fa-instagram" aria-hidden="true"></i>
-                                    </a>
-                                    <p class="player-description">Rápido, leve e letal!</p>
-                                    <div class="player-stats">
-                                        <div class="player-stat"><div class="player-stat-value">02</div><div class="player-stat-label">Camisa</div></div>
-                                        <div class="player-stat"><div class="player-stat-value">35</div><div class="player-stat-label">Gols</div></div>
-                                        <div class="player-stat"><div class="player-stat-value">15</div><div class="player-stat-label">Assistências</div></div>
-                                    </div>
+                            </div>
+                            <div class="player-info">
+                                <h4 class="player-name">BellHome</h4>
+                                <p class="player-position">Atacante (ATA)</p>
+                                <a href="https://instagram.com/bellhome_fc" target="_blank" rel="noopener noreferrer" class="social-link instagram-link" aria-label="Instagram de BellHome">
+                                    <i class="fa-brands fa-instagram" aria-hidden="true"></i>
+                                </a>
+                                <p class="player-description">Rápido, leve e letal!</p>
+                                <div class="player-stats">
+                                    <div class="player-stat"><div class="player-stat-value">02</div><div class="player-stat-label">Camisa</div></div>
+                                    <div class="player-stat"><div class="player-stat-value">35</div><div class="player-stat-label">Gols</div></div>
+                                    <div class="player-stat"><div class="player-stat-value">15</div><div class="player-stat-label">Assistências</div></div>
                                 </div>
-                            </article>
-                        </div>
-                        <div class="carousel-buttons">
-                            <button class="carousel-button prev" aria-label="Jogador anterior"><i class="fas fa-chevron-left"></i></button>
-                            <button class="carousel-button next" aria-label="Próximo jogador"><i class="fas fa-chevron-right"></i></button>
-                        </div>
+                            </div>
+                        </article>
                     </div>
                 </div>
             </div>
         </section>
         <section id="redes" class="redes-section section" tabindex="-1">
             <video class="section-video" autoplay loop muted playsinline>
-                <source src="https://assets.mixkit.co/videos/preview/mixkit-soccer-player-kicks-the-ball-138-720p.mp4" type="video/mp4">
+                <source src="3722209-hd_1920_1080_25fps.mp4" type="video/mp4">
                 Your browser does not support the video tag.
             </video>
             <div class="container section-content">
                 <h2 class="section-title animate-fadeIn">Conecte-se Conosco</h2>
-                <p class="section-subtitle animate-fadeIn animate-delay-02">
+                <p class="section-subtitle animate-fadeIn" style="animation-delay: 0.2s;">
                     Acompanhe nossos jogos, lives e novidades nas principais plataformas.
                 </p>
-                <div class="social-grid animate-fadeInUp animate-delay-04">
+                <div class="social-grid animate-fadeInUp" style="animation-delay: 0.4s;">
                     <article class="social-card discord">
                         <i class="fab fa-discord social-icon" style="color: #5865f2;" aria-hidden="true"></i>
                         <h4 class="social-title">Discord Oficial</h4>
@@ -1359,8 +1332,8 @@
         </div>
     </footer>
     <div id="recrutar-modal" class="modal" role="dialog" aria-labelledby="modal-title" aria-hidden="true">
-        <div class="modal-content" tabindex="-1">
-            <span class="close-btn" onclick="closeModal('recrutar-modal')" aria-label="Fechar formulário de recrutamento">&times;</span>
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal('recrutar-modal')" aria-label="Fechar modal">&times;</span>
             <h3 class="modal-title" id="modal-title"><i class="fas fa-user-plus" aria-hidden="true"></i> Recrutamento CONFLITO FC</h3>
             <p class="modal-subtitle">Preencha os dados e entraremos em contato via WhatsApp!</p>
             <form id="recrutamento-form" novalidate>
@@ -1439,296 +1412,177 @@
         </div>
     </div>
     <script>
-        document.addEventListener('DOMContentLoaded', () => {
-    // Fallback for Typed.js
-    function initTyped() {
-        if (window.Typed) {
-            new Typed('#typed-text', {
-                strings: ["CONFLITO FC", "PRO CLUBS"],
-                typeSpeed: 70,
-                backSpeed: 50,
-                loop: true,
-                cursorChar: '_',
-            });
-        } else {
-            console.error("Typed.js não carregado.");
-            document.getElementById('typed-text').textContent = 'CONFLITO FC'; // Fallback text
-        }
-    }
-
-    // Debounce function for scroll events
-    function debounce(func, wait) {
-        let timeout;
-        return function executedFunction(...args) {
-            const later = () => {
-                clearTimeout(timeout);
-                func(...args);
-            };
-            clearTimeout(timeout);
-            timeout = setTimeout(later, wait);
-        };
-    }
-
-    // Animate counters
-    function animateCounter(element, target) {
-        let start = 0;
-        const duration = 2000;
-        const stepTime = 50;
-        const increment = target / (duration / stepTime);
-        const updateCounter = () => {
-            start += increment;
-            if (start >= target) {
-                element.textContent = Math.floor(target);
-                return;
+        // Inicializar Typed.js
+        function initTyped() {
+            if (window.Typed) {
+                new Typed('#typed-text', {
+                    strings: ["CONFLITO FC", "PRO CLUBS"],
+                    typeSpeed: 70,
+                    backSpeed: 50,
+                    loop: true,
+                    cursorChar: '_',
+                });
+            } else {
+                console.error("Typed.js não carregado corretamente.");
             }
-            element.textContent = Math.floor(start);
-            setTimeout(updateCounter, stepTime);
+        }
+        // Animação de Contadores
+        function animateCounter(element, target) {
+            let start = 0;
+            const duration = 2000;
+            const stepTime = 10;
+            const steps = duration / stepTime;
+            const increment = target / steps;
+            let current = start;
+            const timer = setInterval(() => {
+                current += increment;
+                if (current < target) {
+                    element.textContent = Math.ceil(current);
+                } else {
+                    element.textContent = target;
+                    clearInterval(timer);
+                }
+            }, stepTime);
+        }
+        // Observador de Interseção
+        const options = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.2
         };
-        updateCounter();
-    }
-
-    // Activate sections
-    function activateSections() {
-        const sections = document.querySelectorAll('.section');
-        const observer = new IntersectionObserver((entries) => {
+        const sectionObserver = new IntersectionObserver((entries, observer) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
                     entry.target.classList.add('active');
-                    const counters = entry.target.querySelectorAll('[data-target]');
+                    const counters = entry.target.querySelectorAll('.hero-stat-number, .stat-number');
                     counters.forEach(counter => {
                         const target = parseFloat(counter.getAttribute('data-target'));
-                        animateCounter(counter, target);
+                        if (!counter.hasAttribute('data-animated')) {
+                            animateCounter(counter, target);
+                            counter.setAttribute('data-animated', 'true');
+                        }
                     });
                 }
             });
-        }, { threshold: 0.2 });
-        sections.forEach(section => observer.observe(section));
-    }
-
-    // Set active navigation
-    const setActiveNav = debounce(() => {
-        const sections = document.querySelectorAll('.section');
-        const navLinks = document.querySelectorAll('.nav-link');
-        let currentSection = '';
-        sections.forEach(section => {
-            const rect = section.getBoundingClientRect();
-            if (rect.top <= 100 && rect.bottom >= 100) {
-                currentSection = section.getAttribute('id');
-            }
-        });
-        navLinks.forEach(link => {
-            link.classList.remove('active');
-            if (link.getAttribute('href') === `#${currentSection}`) {
-                link.classList.add('active');
-            }
-        });
-    }, 100);
-
-    // Handle mobile menu
-    const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
-    const navMenu = document.querySelector('.nav-menu');
-    mobileMenuBtn.addEventListener('click', () => {
-        const isOpen = navMenu.classList.toggle('active');
-        mobileMenuBtn.setAttribute('aria-expanded', isOpen);
-        mobileMenuBtn.innerHTML = isOpen
-            ? '<i class="fas fa-times" aria-hidden="true"></i>'
-            : '<i class="fas fa-bars" aria-hidden="true"></i>';
-    });
-
-    // Close mobile menu on link click
-    document.querySelectorAll('.nav-link').forEach(link => {
-        link.addEventListener('click', () => {
-            navMenu.classList.remove('active');
-            mobileMenuBtn.setAttribute('aria-expanded', 'false');
-            mobileMenuBtn.innerHTML = '<i class="fas fa-bars" aria-hidden="true"></i>';
-        });
-    });
-
-    // Initialize carousels
-    function initCarousels() {
-        const carousels = document.querySelectorAll('.carousel');
-        carousels.forEach(carousel => {
-            const grid = carousel.querySelector('.players-grid');
-            const prevBtn = carousel.querySelector('.carousel-button.prev');
-            const nextBtn = carousel.querySelector('.carousel-button.next');
-            let isDragging = false;
-            let startX, scrollStart;
-
-            function updateButtons() {
-                const maxScroll = grid.scrollWidth - grid.clientWidth;
-                const tolerance = 5;
-                prevBtn.disabled = grid.scrollLeft <= tolerance;
-                nextBtn.disabled = grid.scrollLeft >= maxScroll - tolerance;
-                prevBtn.classList.toggle('disabled', prevBtn.disabled);
-                nextBtn.classList.toggle('disabled', nextBtn.disabled);
-            }
-
-            function scrollCarousel(direction) {
-                const card = grid.querySelector('.player-card');
-                if (!card) return;
-                const cardWidth = card.offsetWidth + 16;
-                const scrollAmount = direction === 'next' ? cardWidth : -cardWidth;
-                grid.scrollBy({ left: scrollAmount, behavior: 'smooth' });
-                setTimeout(updateButtons, 400);
-            }
-
-            function snapToCard() {
-                const card = grid.querySelector('.player-card');
-                if (!card) return;
-                const cardWidth = card.offsetWidth + 16;
-                const currentScroll = grid.scrollLeft;
-                const nearestCardIndex = Math.round(currentScroll / cardWidth);
-                const targetScroll = nearestCardIndex * cardWidth;
-                grid.scrollTo({ left: targetScroll, behavior: 'smooth' });
-                setTimeout(updateButtons, 400);
-            }
-
-            prevBtn.addEventListener('click', () => scrollCarousel('prev'));
-            nextBtn.addEventListener('click', () => scrollCarousel('next'));
-
-            grid.addEventListener('touchstart', (e) => {
-                isDragging = true;
-                startX = e.touches[0].clientX;
-                scrollStart = grid.scrollLeft;
-                grid.style.scrollBehavior = 'auto';
-            });
-
-            grid.addEventListener('touchmove', (e) => {
-                if (!isDragging) return;
-                const x = e.touches[0].clientX;
-                const deltaX = (startX - x) * 1.5;
-                grid.scrollLeft = scrollStart + deltaX;
-            });
-
-            grid.addEventListener('touchend', () => {
-                if (!isDragging) return;
-                isDragging = false;
-                grid.style.scrollBehavior = 'smooth';
-                snapToCard();
-            });
-
-            grid.addEventListener('touchmove', (e) => {
-                if (isDragging) e.preventDefault();
-            }, { passive: false });
-
-            let scrollTimeout;
-            grid.addEventListener('scroll', () => {
-                clearTimeout(scrollTimeout);
-                scrollTimeout = setTimeout(() => {
-                    updateButtons();
-                    if (!isDragging) snapToCard();
-                }, 100);
-            });
-
-            window.addEventListener('resize', () => {
-                updateButtons();
-                snapToCard();
-            });
-
-            updateButtons();
-        });
-    }
-
-    // Handle modal
-    function openModal(modalId) {
-        const modal = document.getElementById(modalId);
-        modal.style.display = 'block';
-        modal.setAttribute('aria-hidden', 'false');
-        const modalContent = modal.querySelector('.modal-content');
-        modalContent.focus();
-        document.body.style.overflow = 'hidden';
-    }
-
-    function closeModal(modalId) {
-        const modal = document.getElementById(modalId);
-        modal.style.display = 'none';
-        modal.setAttribute('aria-hidden', 'true');
-        document.body.style.overflow = 'auto';
-        document.querySelector('#open-recrutar-modal').focus();
-    }
-
-    // Handle form submission with enhanced validation
-    const form = document.getElementById('recrutamento-form');
-    form.addEventListener('submit', (e) => {
-        e.preventDefault();
-        const formData = new FormData(form);
-        const fields = ['nome', 'id_jogo', 'idade', 'discord', 'plataforma', 'posicao', 'dias', 'horario'];
-        let isValid = true;
-
-        // Basic validation
-        fields.forEach(field => {
-            const input = form.querySelector(`#${field}`);
-            input.classList.remove('error');
-            const value = formData.get(field).trim();
-            if (!value) {
-                input.classList.add('error');
-                isValid = false;
-            } else if (field === 'nome' && value.length < 2) {
-                input.classList.add('error');
-                isValid = false;
-            } else if (field === 'id_jogo' && value.length < 3) {
-                input.classList.add('error');
-                isValid = false;
-            }
-        });
-
-        if (isValid) {
-            const message = `Recrutamento CONFLITO FC\n` +
-                `Nome: ${formData.get('nome')}\n` +
-                `ID no Jogo: ${formData.get('id_jogo')}\n` +
-                `Idade: ${formData.get('idade')}\n` +
-                `Discord: ${formData.get('discord')}\n` +
-                `Plataforma: ${formData.get('plataforma')}\n` +
-                `Posição: ${formData.get('posicao')}\n` +
-                `Dias Disponíveis: ${formData.get('dias')}\n` +
-                `Horário: ${formData.get('horario')}`;
-            const whatsappUrl = `https://api.whatsapp.com/send?phone=+5511999999999&text=${encodeURIComponent(message)}`; // Replace with real number
-            if (confirm('Você será redirecionado para o WhatsApp. Continuar?')) {
-                window.open(whatsappUrl, '_blank');
+        }, options);
+        // Modal
+        function openModal(id) {
+            const modal = document.getElementById(id);
+            modal.style.display = 'block';
+            modal.setAttribute('aria-hidden', 'false');
+            document.body.style.overflow = 'hidden';
+        }
+        function closeModal(id) {
+            const modal = document.getElementById(id);
+            modal.style.display = 'none';
+            modal.setAttribute('aria-hidden', 'true');
+            document.body.style.overflow = 'auto';
+        }
+        window.onclick = function(event) {
+            const modal = document.getElementById('recrutar-modal');
+            if (event.target == modal) {
                 closeModal('recrutar-modal');
-                form.reset();
             }
         }
-    });
-
-    // Close modal on outside click
-    document.querySelectorAll('.modal').forEach(modal => {
-        modal.addEventListener('click', (e) => {
-            if (e.target === modal) {
-                closeModal(modal.id);
-            }
-        });
-    });
-
-    // Close modal with ESC key
-    document.addEventListener('keydown', (e) => {
-        if (e.key === 'Escape') {
-            document.querySelectorAll('.modal').forEach(modal => {
-                if (modal.style.display === 'block') {
-                    closeModal(modal.id);
+        // Formulário de Recrutamento
+        document.getElementById('recrutamento-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const form = event.target;
+            const requiredFields = form.querySelectorAll('[required]');
+            let isValid = true;
+            requiredFields.forEach(field => {
+                if (!field.value.trim()) {
+                    field.classList.add('error');
+                    isValid = false;
+                } else {
+                    field.classList.remove('error');
                 }
             });
-        }
-    });
-
-    // Handle header scroll
-    window.addEventListener('scroll', debounce(() => {
-        const header = document.querySelector('.header');
-        if (window.scrollY > 50) {
-            header.classList.add('scrolled');
-        } else {
-            header.classList.remove('scrolled');
-        }
-        setActiveNav();
-    }, 100));
-
-    // Initialize functions
-    initTyped();
-    activateSections();
-    initCarousels();
-    setActiveNav();
-    document.getElementById('open-recrutar-modal').addEventListener('click', () => openModal('recrutar-modal'));
-});
-   </script>
+            if (!isValid) {
+                alert('Por favor, preencha todos os campos obrigatórios.');
+                return;
+            }
+            const nome = document.getElementById('nome').value;
+            const id_jogo = document.getElementById('id_jogo').value;
+            const idade = document.getElementById('idade').value;
+            const discord = document.getElementById('discord').value;
+            const posicao = document.getElementById('posicao').value;
+            const plataforma = document.getElementById('plataforma').value;
+            const dias = document.getElementById('dias').value;
+            const horario = document.getElementById('horario').value;
+            const numeroWhatsapp = '5551992520046';
+            const mensagem = `
+*🚀 Novo Candidato ao CONFLITO FC!*
+*Informações Pessoais:*
+Nome: ${nome}
+ID: ${id_jogo}
+Idade: ${idade}
+Discord: ${discord}
+*Requisitos de Jogo:*
+Posição: ${posicao}
+Plataforma: ${plataforma}
+Dias: ${dias}
+Horário (Início): ${horario}
+*Por favor, responda a esta mensagem no WhatsApp.*
+`;
+            const mensagemCodificada = encodeURIComponent(mensagem);
+            const linkWhatsapp = `https://api.whatsapp.com/send?phone=${numeroWhatsapp}&text=${mensagemCodificada}`;
+            window.open(linkWhatsapp, '_blank');
+            closeModal('recrutar-modal');
+            form.reset();
+        });
+        // Inicialização
+        document.addEventListener('DOMContentLoaded', () => {
+            initTyped();
+            document.querySelectorAll('.section').forEach(section => {
+                sectionObserver.observe(section);
+            });
+            const header = document.querySelector('.header');
+            const navLinks = document.querySelectorAll('.nav-link');
+            const menuBtn = document.querySelector('.mobile-menu-btn');
+            const navMenu = document.querySelector('.nav-menu');
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 50) {
+                    header.classList.add('scrolled');
+                } else {
+                    header.classList.remove('scrolled');
+                }
+            });
+            menuBtn.addEventListener('click', () => {
+                const isActive = navMenu.classList.toggle('active');
+                menuBtn.setAttribute('aria-expanded', isActive);
+                const icon = menuBtn.querySelector('i');
+                icon.classList.toggle('fa-bars');
+                icon.classList.toggle('fa-xmark');
+            });
+            navLinks.forEach(link => {
+                link.addEventListener('click', function() {
+                    if (navMenu.classList.contains('active')) {
+                        navMenu.classList.remove('active');
+                        menuBtn.setAttribute('aria-expanded', 'false');
+                        const icon = menuBtn.querySelector('i');
+                        icon.classList.remove('fa-xmark');
+                        icon.classList.add('fa-bars');
+                    }
+                });
+            });
+            const navObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const id = entry.target.id;
+                        navLinks.forEach(link => {
+                            link.classList.remove('active');
+                            if (link.getAttribute('href').endsWith(`#${id}`)) {
+                                link.classList.add('active');
+                            }
+                        });
+                    }
+                });
+            }, { rootMargin: '-10% 0px -85% 0px' });
+            document.querySelectorAll('.section').forEach(section => {
+                navObserver.observe(section);
+            });
+        });
+    </script>
 </body>
 </html>
